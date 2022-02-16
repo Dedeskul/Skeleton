@@ -1,0 +1,175 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card {
+    width: 557px;
+    height: 395px;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    /*background-image: url('images/1582.webp');*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.4s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 2, 0.5);
+    cursor: pointer;
+}
+
+.content {
+    width: 50%;
+    height: 100%;
+}
+
+.side {
+    box-shadow: 0 0 1rem 0 rgba(41, 39, 39, 0.2);
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+}
+
+.side:before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 2000px rgba(241, 241, 241, 0.1);
+    filter: blur(5px);
+    margin: -20px;
+}
+
+.icons,
+.title,
+.details,
+.price{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.icons {
+    justify-content: center;
+    height: 80px;
+}
+
+.icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,.2);
+    border-radius: 50%;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+}
+
+.iconImage {
+    width: 24px;
+    height: 24px;
+}
+
+.title {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleDescription,
+.titleContent,
+.participantPrice,
+.newComesPrice,
+.dateInfo {
+    font-weight: 500;
+    line-height: 1.2;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    color: #fff
+}
+
+.titleDescription {
+    font-size: 24px;
+}
+
+.titleContent {
+    font-size: 16px;
+}
+
+.price {
+    flex-direction: row;
+    justify-content: center;
+}
+
+.details {
+    flex-direction: column;
+}
+
+.participant,
+.newComes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+}
+
+.participantPrice {
+    font-size: 42px;
+}
+.newComesPrice {
+    font-size: 30px;
+}
+
+.date {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dateInfo {
+    font-size: 18px;
+}
+
+.skeleton {
+    opacity: .7;
+    animation: skeleton-loading 1s linear infinite alternate;
+}
+
+.skeleton-text {
+    width: 70%;
+    height: 1rem;
+    margin-bottom: .25rem;
+    border-radius: .125rem;
+}
+
+.skeleton-text:last-child {
+    margin-bottom: 0;
+    width: 50%;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
+}
+
